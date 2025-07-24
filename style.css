@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+    background-image: none;
+    padding: auto;
+    flex: content;
+    flex-grow: unset;
+}
+.home{
+    background-color:silver;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
