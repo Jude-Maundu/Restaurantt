@@ -1,30 +1,47 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
+/* Body with seamless background */
+body {
+    background: url('images/jay-wennington-N_Y88TWmGwA-unsplash.jpg') center top/cover no-repeat;
 }
 
-.bg-img {
-    display: block;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+/* Create overlay for the top half */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background: url('images/jay-wennington-N_Y88TWmGwA-unsplash.jpg') center top/cover no-repeat;
+    z-index: -1;
 }
+
+/* Transparent navbar */
+.navbar {
+    background: rgba(255,255,255,0.7) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background: rgba(137, 134, 134, 0.9) !important;
+    
+}
+
+/* Remove the separate bg-img section */
+.bg-img {
+    height: calc(50vh - 80px);
+    margin-top: 80px;
+    background: transparent;
+}
+
 .bg-img img {
-    height: 50vh;
-    width: 100%;
-    object-fit: cover;
+    display: none;
 }
 
 .gallery-section {
@@ -50,7 +67,6 @@ body, html {
     gap: 12px;
     width: calc(100% - 30px);
     margin: 0 auto;
-    perspective: 1000px;
 }
 
 .img-items img {
@@ -58,32 +74,13 @@ body, html {
     object-fit: cover;
     border: 2px solid #fff;
     border-radius: 12px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-}
-
-.img-items img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-    transform: translateX(-100%);
-    transition: transform 0.6s;
-}
-
-.img-items img:hover::before {
-    transform: translateX(100%);
 }
 
 .img-items img:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    border-color: #ddd;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 .gallery-section h1 {
     text-align: center;

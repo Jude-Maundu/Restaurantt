@@ -6,6 +6,7 @@
 
 body, html {
     margin: 0;
+    position: relative;
 }
 
 .menu-item img {
@@ -48,19 +49,22 @@ body, html {
     background-position: center;
     margin: 0;
     width: 100vw;
-    position: relative;
+    position: absolute;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
 }
 .bg-img img {
-    height: 50vh;
+    height: 50%;
     width: 100%;
     object-fit: cover;
 }
 .menu-section {
-    margin-top: 100px;
+    margin-top: 300px;
     padding: 60px 20px;
     text-align: center;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
