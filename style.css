@@ -4,9 +4,7 @@ body {
     padding-top: 80px; /* Add padding to account for fixed navbar */
 }
 
-body.no-scroll {
-    overflow: hidden;
-}
+
 
 /* Enhanced Navigation Styles */
 .navbar {
@@ -93,7 +91,7 @@ body.no-scroll {
 }
 
 #backgroundCarousel {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -109,18 +107,18 @@ body.no-scroll {
 
 /* Example background images for carousel items */
 #backgroundCarousel .carousel-item:nth-child(1) {
-    background-image: url('images/1.jpeg');
+    background-image: url('images/image9.jpg');
 }
 
 #backgroundCarousel .carousel-item:nth-child(2) {
-    background-image: url('images/2.jpeg');
+    background-image: url('images/tim-toomey-STqHLqMne3k-unsplash.jpg');
 }
 
 #backgroundCarousel .carousel-item:nth-child(3) {
-    background-image: url('images/3.jpeg');
+    background-image: url('images/chris-liverani-oCsaxvGCehM-unsplash.jpg');
 }
 
-#backgroundCarousel .carousel-item:nth-child(3) {
+#backgroundCarousel .carousel-item:nth-child(4) {
     background-image: url('images/4.jpeg');
 }
 
@@ -133,11 +131,12 @@ body.no-scroll {
     text-align: center;
 
     background-color: rgba(0, 0, 0, 0.5);
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .home {
@@ -175,4 +174,47 @@ body.no-scroll {
 /* Optional: Add a subtle shadow to the fixed navbar for better definition */
 .navbar.fixed-top {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.more-btn button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: auto;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.more-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.more-btn button:hover::before {
+    left: 100%;
+}
+
+.more-btn button a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+.more-btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
