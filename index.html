@@ -1,27 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor's Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurant Website</title>
 </head>
-<body>
 
-    <header>
-        <h1>Welcome to Victor's Restaurant</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Our Menu</h2>
-            <ul>
-                <li>Spaghetti Carbonara</li>
-                <li>Margherita Pizza</li>
-                <li>Caesar Salad</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Victor's Restaurant</p>
-    </footer>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/WhatsApp Image 2025-07-23 at 09.23.32_27a1112d.jpg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="backgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                </div>
+                <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#backgroundCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#backgroundCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="content">
+            <h1>Velour Restaurant</h1>
+            <p>Welcome to Velour restaurant where we serve the best food in the city.</p>
+
+            <marquee behavior="scroll" direction="left">
+                <p>Special Offers: 20% off on all items</p>
+            </marquee>
+            <div style="height: 100px;"></div>
+            <p>More content...</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container text-center text-md-start">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">About Us</h5>
+        <p>
+          We are committed to providing the best services to our users. Our platform is designed with love, passion, and care.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+          <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Contact Us</h5>
+        <p>Email: info@example.com</p>
+        <p>Phone: +254 712 345 678</p>
+        <p>Address: Nairobi, Kenya</p>
+      </div>
+
+    </div>
+    <hr class="bg-light" />
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Your Website. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
 </body>
+
+
 </html>
