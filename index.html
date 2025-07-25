@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="styleMenu.css">
     <link rel="stylesheet" href="style.css">
     <title>Restaurant Website</title>
 </head>
 
-<body>
+<body class="no-scroll">
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -23,26 +23,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contacts.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
+                        <a class="nav-link" href="#">Events</a> </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reservations</a>
-                    </li>
+                        <a class="nav-link" href="#">Reservations</a> </li>
                 </ul>
             </div>
         </div>
@@ -58,72 +56,70 @@
                 <div class="carousel-item">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#backgroundCarousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#backgroundCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#backgroundCarousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#backgroundCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
         <div class="content">
-            <h1>Velour Restaurant</h1>
-            <p>Welcome to Velour restaurant where we serve the best food in the city.</p>
-
+            <h1>My Awesome Restaurant</h1>
+            <p>Welcome to our restaurant where we serve the best food in the city.</p>
             <marquee behavior="scroll" direction="left">
                 <p>Special Offers: 20% off on all items</p>
             </marquee>
-            <div style="height: 100px;"></div>
-            <p>More content...</p>
+            <div class="more-btn" style="height: 100px;"><a href="about.html"><button>Learn More</button></a></div> 
+        </div>
+    </section>
+    <section>
+        <div class="op-info">
+            <div class="hrs-head">
+                <h2>Operating Hours</h2>
+            </div>
+            <div class="hrs-body">
+                <p>Monday - Friday: 9:00 AM - 10:00 PM</p><br>
+                <p>Saturday: 10:00 AM - 11:00 PM</p><br>
+                <p>Sunday: 12:00 PM - 9:00 PM</p><br>
+                <p>Public Holidays: 12:00 PM - 8:00 PM</p> 
+            </div>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<footer class="bg-dark text-light pt-5 pb-3 mt-5">
-  <div class="container text-center text-md-start">
-    <div class="row">
+    <script>
+        // Enhanced navbar functionality
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-      <!-- About -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-uppercase">About Us</h5>
-        <p>
-          We are committed to providing the best services to our users. Our platform is designed with love, passion, and care.
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-uppercase">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-          <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-          <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-uppercase">Contact Us</h5>
-        <p>Email: info@example.com</p>
-        <p>Phone: +254 712 345 678</p>
-        <p>Address: Nairobi, Kenya</p>
-      </div>
-
-    </div>
-    <hr class="bg-light" />
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 Your Website. All Rights Reserved.</p>
-    </div>
-  </div>
-</footer>
+        // Set active nav link based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                link.classList.remove('active');
+                
+                if ((currentPage === 'index.html' || currentPage === '') && href === 'index.html') {
+                    link.classList.add('active');
+                } else if (currentPage === href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
-
 
 </html>
